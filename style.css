@@ -28,7 +28,3 @@ button {
 .square {
   flex: 1;
 }
-
-.square.filled {
-  background-color: black;
-}
