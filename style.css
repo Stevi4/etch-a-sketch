@@ -18,5 +18,9 @@
 
 .square {
   flex: 1;
-  background-color: #ddd;
+  background-color: #f8f8f8;
+}
+
+.square.filled {
+  background-color: black;
 }

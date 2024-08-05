@@ -1,6 +1,6 @@
 function initialize() {
   const body = document.querySelector("body");
-  body.appendChild(createGrid(16))
+  body.appendChild(createGrid(16));
 }
 
 function createGrid(size) {
@@ -10,7 +10,8 @@ function createGrid(size) {
   row.classList.add("row");
   let grid = document.createElement("div");
   grid.id = "grid";
-  
+  grid.addEventListener("mouseover", changeColor);
+
   row = fillWithCopies(row, square, size);
   grid = fillWithCopies(grid, row, size);
   return grid;
@@ -22,6 +23,12 @@ function fillWithCopies(container, element, amount) {
   }
 
   return container;
+}
+
+function changeColor(event) {
+  if (event.target.classList.contains("square")) {
+    event.target.classList.toggle("filled");
+  }
 }
 
 initialize();
